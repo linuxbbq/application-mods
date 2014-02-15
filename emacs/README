@@ -1,0 +1,12 @@
+gnu emacs configs
+=====
+
+
+====.emacs_joe_20140216
+		full-featured .emacs with iswitchb binding
+		custom code folding with f1 key
+		4-space indentation and auto-removal of
+		trailing whitespace
+		guile-syncing for scheme programming
+		el-get, melpa, marmalade repo enabled
+		w3m integration
