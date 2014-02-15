@@ -10,3 +10,8 @@ gnu emacs configs
 		guile-syncing for scheme programming
 		el-get, melpa, marmalade repo enabled
 		w3m integration
+
+====.emacs_joe_killx_20140216
+		minimal emacs config
+		winner-mode, iswitchb w/ arrows
+		f1 code folding
