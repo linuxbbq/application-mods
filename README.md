@@ -1,4 +1,4 @@
-application_mods
+application-mods
 ================
 
 Configurations and modifications, listed by program.
