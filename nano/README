@@ -1,0 +1,8 @@
+gnu nano configs
+=====
+
+
+.nanorc_joe_20140216
+		basic nano config
+		4-space indents, colorized syntax
+		autoindent, no autobackups
