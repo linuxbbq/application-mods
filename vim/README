@@ -1,0 +1,18 @@
+Vim Rc's
+=====
+
+### Note, some of these rc's may require plugins  
+
+==== .vimrc_dkeg_20140213:  
+## Plugins / Extras   
+   * junegunn   
+     * vim-plug  
+     * seoul-256  
+     * vim-easy-align  
+     * goyo  
+   * Panthogen  
+     * vim-airline  
+     * vim-indent-guides  
+     * promptline  
+   * NERDTree   
+   * refheap   

@@ -1,0 +1,59 @@
+
+"" General Settings {{
+   "set background=dark                 "colors *sometimes* look better 
+    let mapleader=" "	
+    set nocompatible
+	filetype plugin on
+	syntax on
+	set nonumber
+	set tabstop=4
+	set shiftwidth=4
+	set expandtab
+	set autoindent
+	set smartindent
+	set incsearch
+	set hlsearch
+	set cursorline
+	set novisualbell
+	set colorcolumn=80
+	filetype plugin indent on
+	set noswapfile                 		" Don't create a swap file
+	set smartcase                  		" Search becomes case sensitive if caps used
+"" }}
+
+"" Highlighting {{
+	"hi ColorColumn ctermbg=232
+	hi CursorLine ctermbg=232 cterm=none
+	hi CursorLineNr ctermfg=255
+	hi LineNr ctermfg=DarkGrey cterm=none
+	highlight OverLength ctermbg=232 ctermfg=240
+	match OverLength /\%81v.\+/    		" Highlight text exceeding 80 character limit
+    " indent guide coloring
+    hi IndentGuidesOdd ctermbg=234
+    hi IndentGuidesEven ctermbg=231
+"" }}
+
+"" Code Folding {{{
+	set foldenable                		" Enable code folding
+	set foldmethod=manual          		" But do it manually
+" }}}
+
+"" Extras {{
+	nnoremap H :set cursorline! cursorcolumn!<CR>
+	cmap w!! w !sudo tee > /dev/null %	" save read only files when forget to use sudo
+	let $GROFF_NO_SGR=1
+	source $VIMRUNTIME/ftplugin/man.vim
+	nmap K :Man <cword><CR>
+	au BufLeave,FocusLost * silent! update  " buffer auto save
+    " REFHEAP
+    let g:refheap_token = 'censored'
+    let g:refheap_username = '*username*' 
+"" Plugins {{
+	call plug#begin('~/.vim/plugged')     	" use for plug.vim
+	Plug 'junegunn/seoul256.vim'
+	Plug 'junegunn/vim-easy-align'
+	Plug 'junegunn/goyo.vim'
+	call plug#end()
+	" Panthogen
+	execute pathogen#infect()     		
+"" }}
