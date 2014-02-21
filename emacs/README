@@ -15,3 +15,9 @@ gnu emacs configs
 		minimal emacs config
 		winner-mode, iswitchb w/ arrows
 		f1 code folding
+
+====.emacs_bacon_20140221
+		very minimal .emacs
+		marmalade and melpa
+		org-mode preferred
+		y/n for yes/no
