@@ -16,3 +16,15 @@ Vim Rc's
      * promptline  
    * NERDTree   
    * refheap   
+
+==== .vimrc_pidsley_20140221
+
+uses modified murphy colorscheme
+line-number toggle functions
+bash-script comment/uncomment functions
+
+==== mymurphy.vim
+
+modified murphy colorscheme
+transparent background
+modified status bar colors
