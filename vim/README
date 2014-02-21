@@ -20,8 +20,9 @@ Vim Rc's
 ==== .vimrc_pidsley_20140221
 
 uses modified murphy colorscheme
-line-number toggle functions
 bash-script comment/uncomment functions
+line-number toggle functions
+(thanks to gensym at #! for the original NuToggle function)
 
 ==== mymurphy.vim
 
