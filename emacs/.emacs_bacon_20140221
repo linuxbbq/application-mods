@@ -1,0 +1,16 @@
+(require 'package)
+(add-to-list 'package-archives
+    '("melpa" . "http://melpa.milkbox.net/packages/")
+    '("marmalade" . "http://marmalade-repo.org/packages/"))
+    
+(setq inhibit-splash-screen t
+      initial-scratch-message nil)
+
+(when (locate-library "org-mode")
+  (setq initial-major-mode 'org-mode))
+  
+(defalias 'yes-or-no-p 'y-or-n-p)
+
+(setq flyspell-issue-welcome-flag nil)
+(setq-default ispell-program-name "/usr/bin/aspell")
+(setq-default ispell-list-command "list")
