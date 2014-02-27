@@ -1,0 +1,8 @@
+mpv configs
+=====
+
+### Note, vaapi (Intel) support may not work on your machine or you use Nvidia, then adjust for vdpau, otherwise use the defaults or change to xv
+
+==== config_ivan_20140227:
+
+basic and well commented mpv config with vaapi support enabled using opengl, loads all subs contained in one directory
