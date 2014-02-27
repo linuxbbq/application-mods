@@ -1,0 +1,27 @@
+# use alsa for audio output
+ao=alsa
+# use X11 for video output
+vo=xv 
+## Extras
+# seeking while downloading file
+idx=yes
+# software mixer
+softvol=1
+# set higher volume
+softvol-max=600
+# disable lirc support
+nolirc=yes
+# no terminal output (prevents high CPU usage in some terminals)
+really-quiet="1"
+# load all subs in directory
+sub-fuziness=2
+# osd and sub font
+font=/usr/share/fonts/opentype/cantarell/Cantarell-Regular.otf
+# preferred sub languages 
+slang=en,es,de,sr
+# preferred audio language
+alang=en
+# disable joystick
+joystick=no
+# start video in fullscreen
+fs=yes
