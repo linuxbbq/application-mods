@@ -1,0 +1,6 @@
+Mplayer configs
+=====
+
+==== config_ivan_20140227:
+
+basic and well commented mplayer config for regular usage, disabled lirc and joystick support, loads all subs contained in one directory
