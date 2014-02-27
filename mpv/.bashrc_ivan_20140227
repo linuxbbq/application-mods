@@ -1,0 +1,6 @@
+alias zdf='mpv rtsp://3gp-livestreaming1.zdf.de/liveedge2/de10_v1_710.sdp'
+alias kultur='mpv rtsp://3gp-livestreaming1.zdf.de/liveedge2/de07_v1_710.sdp'
+alias info='mpv rtsp://3gp-livestreaming1.zdf.de/liveedge2/de08_v1_710.sdp'
+alias neo='mpv rtsp://3gp-livestreaming1.zdf.de/liveedge2/de09_v1_710.sdp'
+alias ard='mpv rtsp://daserste.edges.wowza.gl-systemhaus.de/live/mp4:daserste_int_1600' 
+alias rts='mpv mmsh://rts.videostreaming.rs/rts'
