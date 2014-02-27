@@ -6,3 +6,7 @@ mpv configs
 ==== config_ivan_20140227:
 
 basic and well commented mpv config with vaapi support enabled using opengl, loads all subs contained in one directory
+
+==== input.conf_ivan_20140227:
+
+change aspect ratio with the keys F1 - F5
