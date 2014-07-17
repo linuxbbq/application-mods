@@ -1,0 +1,48 @@
+syntax on
+colorscheme zenburn 
+
+set modeline
+
+" use 'zz' as alternate escape
+inoremap zz <ESC>
+
+" highlight all searches
+set hlsearch
+" F5 toggles highlighting on/off, displays value of hlsearch
+:noremap <F5> :set hlsearch! hlsearch?<CR>
+
+" tabs
+set tabstop=4
+set shiftwidth=4
+set expandtab " convert tabs to spaces
+
+" autoindent
+set ai
+
+function! NuTriState()  " toggle through line-number modes
+    if(&rnu)    " turn off line numbering
+        set nonu
+        set nornu
+    elseif(&nu) " normal numbers on, add relative numbers (hybrid mode)
+        set rnu
+    else        " normal numbers off, turn them on
+        set nu
+    endif
+endfunc
+
+nnoremap <silent><F2> :call NuTriState()<cr>
+nnoremap <silent><F3> :set nu!<cr>
+nnoremap <silent><F4> :set rnu!<cr>
+
+set mouse=n " mouse moves within edit window
+set laststatus=2 " always display status line
+set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
+
+" select lines in visual mode, ,ic adds # comments, ,rc removes
+map ,ic :s/^/#/g<CR>:let @/ = ""<CR>
+map ,rc :s/^#//g<CR>:let @/ = ""<CR>
+
+" set nobackup
+set backupdir=~/.vimbak,.
+set directory=~/.vimbak,.
+set noundofile
