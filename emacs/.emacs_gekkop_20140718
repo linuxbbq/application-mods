@@ -192,8 +192,7 @@
  '(custom-safe-themes (quote ("d6a00ef5e53adf9b6fe417d2b4404895f26210c52bb8716971be106550cea257" "1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" "fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "7fa9dc3948765d7cf3d7a289e40039c2c64abf0fad5c616453b263b601532493" default)))
  '(dired-listing-switches "-al --group-directories-first")
  '(fci-rule-color "#383838")
- '(foreground-color "#657b83")
- '(org-agenda-files (quote ("~/Documents/Boccaperta/boccaperta-todo.org"))))
+ '(foreground-color "#657b83"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
