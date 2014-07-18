@@ -21,3 +21,18 @@ gnu emacs configs
 		marmalade and melpa
 		org-mode preferred
 		y/n for yes/no
+
+====.emacs_gekkop_20140717
+                ido-mode
+                el-get, melpa, marmalade repo enabled
+                default font Anonymous Pro
+                no menu bar, tool bar, scroll bar
+                no annoying prompts
+                better backspacing
+                solarized theme (fix path to your needs)
+                dired fixes
+                po-mode, scheme and slime enabled
+                4-space indentation and auto-removal of
+                trailing whitespace
+                org-mode setup (fix path to your needs)
+                doc-view-mode continous scrolling
