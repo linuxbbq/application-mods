@@ -22,7 +22,7 @@ gnu emacs configs
 		org-mode preferred
 		y/n for yes/no
 
-====.emacs_gekkop_20140717
+====.emacs_gekkop_20140718
                 ido-mode
                 el-get, melpa, marmalade repo enabled
                 default font Anonymous Pro
