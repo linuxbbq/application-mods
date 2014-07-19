@@ -1,0 +1,10 @@
+suckless st configs
+=====
+
+
+
+====config.h_gekkop_20140719
+                      Anonymous Font Pro
+                      solarized color scheme
+====st.c_gekkop_20140719
+                      patched for solarized color scheme
