@@ -1,0 +1,16 @@
+suckless surf configs
+=====
+
+
+
+====config.h_gekkop_20140719
+                      no indicators
+                      patched with homepage
+                      simplyread
+                      hide applets
+====surf.c_gekkop_20140719
+                      patched with homepage
+                      shows progress even with no indicators
+====.surf_gekkop_20140719
+                      script.js - simplyread
+                      user.js - hide applets
