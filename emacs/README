@@ -22,13 +22,14 @@ gnu emacs configs
 		org-mode preferred
 		y/n for yes/no
 
-====.emacs_gekkop_20140718
+====.emacs_gekkop_20140821
                 ido-mode
                 el-get, melpa, marmalade repo enabled
                 default font Anonymous Pro
                 no menu bar, tool bar, scroll bar
                 no annoying prompts
                 better backspacing
+		better window movings
                 solarized theme (fix path to your needs)
                 dired fixes
                 po-mode, scheme and slime enabled
@@ -36,3 +37,4 @@ gnu emacs configs
                 trailing whitespace
                 org-mode setup (fix path to your needs)
                 doc-view-mode continous scrolling
+		eshell and magit customizations
