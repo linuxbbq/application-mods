@@ -94,9 +94,18 @@
       (back-to-indentation))))
 
 (defun custom/backward-paragraph (&optional n)
-  "go back up to previous blank line."
+  "Go back up to previous blank line."
   (interactive "p")
   (custom/forward-paragraph (- n)))
+
+;; better window movings
+(global-set-key "\C-x\C-n" 'other-window)
+(global-set-key "\C-x\C-p" 'other-window-backward)
+
+(defun other-window-backward (&optional n)
+  "Select Nth previous window."
+  (interactive "P")
+  (other-window (- (prefix-numeric-value n))))
 
 ;; minor mode to hide the mode line
 ;; (see http://bzg.fr/emacs-hide-mode-line.html)
@@ -137,14 +146,10 @@
 (define-key toggle-map "l" 'linum-mode)
 (define-key toggle-map "h" 'hidden-mode-line-mode)
 (define-key toggle-map "s" 'eshell)
+(define-key toggle-map "m" 'magit-status)
 
 ;; kill only the current buffer
-;; see http://www.masteringemacs.org/articles/2014/02/28/my-emacs-keybindings/
-(global-set-key (kbd "C-x C-k") 'kill-this-buffer)
-
-(defun kill-this-buffer ()
-      (interactive)
-      (kill-buffer (current-buffer)))
+(global-set-key "\C-x\C-k" 'kill-this-buffer)
 
 ;; C^n adds new line when at the end of a line
 (setq next-line-add-newlines t)
@@ -187,12 +192,12 @@
              '("marmalade" . "http://marmalade-repo.org/packages/"))
 ;; add Melpa
 (add-to-list 'package-archives
-'("melpa" . "http://melpa.milkbox.net/packages/") t)
+	     '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
 ;; packages installed via package-el are activated
 ;; AFTER .emacs is loaded. So I need to call initialize
-;; to be able to load custom theme
-;;(package-initialize)
+;; to be able to use theme.
+(package-initialize)
 
 ;; use El-Get to sync repos and dependencies.
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
@@ -301,7 +306,25 @@
 ;; clear eshell buffer
 ;; (see http://www.khngai.com/emacs/eshell.php)
 (defun eshell/clear ()
-  "clear the eshell buffer."
+  "Clear the eshell buffer."
   (interactive)
   (let ((inhibit-read-only t))
     (erase-buffer)))
+
+;; MAGIT SETUP
+(require 'magit)
+
+;; full screen magit-status
+;; see http://whattheemacsd.com/setup-magit.el-01.html
+(defadvice magit-status (around magit-fullscreen activate)
+  (window-configuration-to-register :magit-fullscreen)
+  ad-do-it
+  (delete-other-windows))
+
+(defun magit-quit-session ()
+  "Restores the previous window configuration and kills the magit buffer"
+  (interactive)
+  (kill-buffer)
+  (jump-to-register :magit-fullscreen))
+
+(define-key magit-status-mode-map (kbd "q") 'magit-quit-session)
